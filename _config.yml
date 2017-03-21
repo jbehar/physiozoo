@@ -1,9 +1,9 @@
 # name of the software
-name: FECGSYN
+name: PHYSIOZOO
 # current version of the software
-version: 1.2
+version: 1.0
 # url of the download button
-downloadUrl: https://github.com/fernandoandreotti/fecgsyn
+downloadUrl: https://github.com/jbehar/physiozoo
 # licence of the software
 license: GNU General Public License v3.0
 licenseUrl: http://www.gnu.org/licenses/gpl-3.0.en.html
@@ -11,14 +11,14 @@ licenseUrl: http://www.gnu.org/licenses/gpl-3.0.en.html
 # list of additional links on the right of the top menu
 headerLinks:
   - title: GitHub
-    url: https://github.com/fernandoandreotti/fecgsyn
+    url: https://github.com/jbehar/physiozoo
 
 # list if additional links on the footer
 footerLinks:
   - title: GitHub
-    url: https://github.com/fernandoandreotti/fecgsyn
+    url: https://github.com/jbehar/physiozoo
   - title: Issues
-    url: https://github.com/fernandoandreotti/fecgsyn/issues?state=open
+    url: https://github.com/jbehar/physiozoo/issues?state=open
 
 # header
 header:
@@ -34,8 +34,8 @@ analytics:
 
 # github buttons
 githubButton:
-  user: fernandoandreotti
-  repo: fecgsyn
+  user: jbehar
+  repo: physiozoo
 
 # twitter buttons
 twitter:
