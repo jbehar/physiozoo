@@ -1,0 +1,66 @@
+---
+layout: default
+title: Installation
+author: Fernando Andreotti
+priority: 1
+---
+
+ 
+<section class="bs-docs-section">
+<h1 id="download" class="page-header">Downloading</h1>
+  
+<p>The latest stable version of the source code for MATLAB/Octave is available in <a href="https://github.com/fernandoandreotti/fecgsyn/archive/master.zip"><span class="octicon octicon-file-zip"></span>  compressed format</a>. The toolbox was tested using versions 2014b and superior of Matlab, if you have trouble with your version please <a href="http://fernandoandreotti.github.io/fecgsyn/pages/contact.html"><span class="octicon octicon-globe"></span> contact us</a>.
+
+<p>If you have git installed and would rather have the latest stable <em>FECGSYN</em>, you may consider cloning branch master from GitHub:</p>
+
+{% highlight bash %}
+git clone https://github.com/fernandoandreotti/fecgsyn.git
+{% endhighlight %}
+ </section>
+
+<section class="bs-docs-section">
+  <h1 id="installation" class="page-header">Installing</h1>
+  
+   <h2 id="install-mat">Install on Matlab</h2>
+  <p>Simply extract the compressed package (above) to a local folder and include that folder to Matlab/Octave's path. </p>
+  <p><em>Alternatively</em>, Matlab users can download and install the toolbox using straight from Matlab by accessing the desired installation path with <kbd>cd dirname</kbd> and using the following lines of code:</p>
+
+{% highlight matlab %}
+[old_path]=which('FECGSYN_UI');if(~isempty(old_path)) rmpath(old_path(1:end-12)); end
+fecgsyn_url='https://github.com/fernandoandreotti/fecgsyn/archive/master.zip';
+urlwrite(fecgsyn_url,'fecgsyn_toolbox.zip');
+unzip('fecgsyn_toolbox.zip');
+cd fecgsyn-master
+addpath(genpath(pwd))
+savepath
+{% endhighlight %}
+
+After installing  <em>FECGSYN</em> you may verify your installation by loading the following dummy set <kbd>test.mat</kbd>:
+{% highlight matlab %}
+slashchar = char('/'*isunix + '\'*(~isunix));
+load([pwd slashchar 'data' slashchar 'test.mat'])
+FECGSYN_plotmix(out)
+{% endhighlight %}
+
+Further examples are available  <a href="{{site.github.url}}/pages/examples.html"><span class="octicon octicon-globe"></span> here</a>.
+   
+ <h3 id="install-wfdb">Dependencies</h3>
+ 
+  <p>If you are working with WFDB format, the WFDB Toolbox for Matlab/Octave (<a href="https://physionet.org/physiotools/matlab/wfdb-app-matlab/" target="_blank"><span class="octicon octicon-globe"></span> available here</a>) should be installed.</p>
+  
+  <p>As mentioned on WFDB's Toolbox website, to install or update a previous installation of this toolbox: </p>
+  
+ <ol>
+ <li>Open MATLAB or Octave</li>
+ <li>Go into the directory where you wish to install the toolbox with <kbd>cd dirname</kbd> </li>
+ <li>Type (or copy and paste) the following commands into the MATLAB or Octave window:<br><br>
+  {% highlight matlab %}
+ [old_path]=which('rdsamp');if(~isempty(old_path)) rmpath(old_path(1:end-8)); end
+ wfdb_url='http://physionet.org/physiotools/matlab/wfdb-app-matlab/wfdb-app-toolbox-0-9-9.zip';
+ [filestr,status] = urlwrite(wfdb_url,'wfdb-app-toolbox-0-9-9.zip'); %Octave users may have to download manually unzip('wfdb-app-toolbox-0-9-9.zip');
+ cd wfdb-app-toolbox-0-9-9;cd mcode
+ addpath(pwd);savepath
+{% endhighlight %}</li>
+</ol>
+ 
+</section>

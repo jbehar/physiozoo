@@ -1,0 +1,72 @@
+# name of the software
+name: FECGSYN
+# current version of the software
+version: 1.2
+# url of the download button
+downloadUrl: https://github.com/fernandoandreotti/fecgsyn
+# licence of the software
+license: GNU General Public License v3.0
+licenseUrl: http://www.gnu.org/licenses/gpl-3.0.en.html
+
+# list of additional links on the right of the top menu
+headerLinks:
+  - title: GitHub
+    url: https://github.com/fernandoandreotti/fecgsyn
+
+# list if additional links on the footer
+footerLinks:
+  - title: GitHub
+    url: https://github.com/fernandoandreotti/fecgsyn
+  - title: Issues
+    url: https://github.com/fernandoandreotti/fecgsyn/issues?state=open
+
+# header
+header:
+  color1: "#3366ff"
+  color2: "#46466d"
+  trianglify: true
+
+# google analytics
+analytics: 
+  provider : google
+  google : 
+      tracking_id : 'UA-78203902-1'
+
+# github buttons
+githubButton:
+  user: fernandoandreotti
+  repo: fecgsyn
+
+# twitter buttons
+twitter:
+  enabled: false
+  via:
+  hash:
+  account:
+
+# facebook buttons
+facebook:
+  enabled: false
+  profileUrl:
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
+
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
