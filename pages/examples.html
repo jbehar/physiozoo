@@ -6,12 +6,12 @@ author: Fernando Andreotti
 priority: 2
 ---
 
-In this section exemplary use of the <em>FECGSYN</em> are illustrated. Before running any of the examples you will need to <a href="{{site.github.url}}/pages/install.html"><span class="octicon octicon-globe"></span> install the <em>FECGSYN</em> toolbox</a>.  For more information make sure you consult the <a href="{{site.github.url}}/pages/documentation.html"><span class="octicon octicon-globe"></span> Documentation</a>.
+<!--In this section exemplary use of the <em>FECGSYN</em> are illustrated. Before running any of the examples you will need to <a href="{{site.github.url}}/pages/install.html"><span class="octicon octicon-globe"></span> install the <em>FECGSYN</em> toolbox</a>.  For more information make sure you consult the <a href="{{site.github.url}}/pages/documentation.html"><span class="octicon octicon-globe"></span> Documentation</a>.
 
 <section class="bs-docs-section">
  
 <h1 id="datagen" class="page-header">Data Generation</h1>
-<!-- datagen 1 -->
+
   <h2 id="datagen1">Initial NI-FECG simulation example</h2>
 
   <p> The code will produce simulation files, make sure to select the desired destination path on the Matlab root (<kbd>cd savedir</kbd>). An exemplary dataset can be simply generated and plotted by running the following lines:</p>
@@ -29,8 +29,7 @@ FECGSYN_plotmix(out) % plots random channels of one of the created datasets
 {% endhighlight %}
   
 <p>Please consider that various parameters (e.g. location of fetal heart, location of noise sources) are not explicitely defined in the previous example. Therefore, to reproduce physiological conditions, running the code twice will produce considerably different signals. In the following examples, more complex simulations are performed, where further parameters are controlled.</p>
-  
-<!-- datagen 2 -->
+
   <h2 id="datagen2">Elaborate NI-FECG simulation example</h2>
 
   <p>This example make use of the <code>exp_datagen1.m</code> function to generate the dataset used in (Behar et al 2014). The code will produce simulation files, so be sure to <kbd>cd dirname</kbd> the desired destination path. </p>
@@ -60,7 +59,6 @@ FECGSYN_plotmix(out) % plots random channels of one of the created datasets
 
 </section> <hr>
 
-<!-------------FECG EXTRACTION--------->
 <section class="bs-docs-section">
 <h1 id="datext" class="page-header">FECG Extraction</h1>
 
@@ -117,7 +115,6 @@ FECGSYN_main_extract(pathdir,narrowband,wfdb,ch,refchs,debug)
  <div class="panel panel-info"><div class="panel-heading"><span class="octicon octicon-info"></span> Tip</div><div class="panel-body"> For batch processing, avoid converting data to WFDB format, since it may cause slow downs. </div></div>
 </section> <hr>
 
-<!-------------Fetal SQI--------->
 <section class="bs-docs-section">
 <h1 id="fecgsqi" class="page-header">FECG Signal Quality Estimation</h1>
 
@@ -219,7 +216,7 @@ linkaxes(ax,'x');
  
 </section>  <hr>
 
-<!------------- Benchmarking --------->
+
 <section class="bs-docs-section">
 <h1 id="bench" class="page-header">Benchmarking Algorithms</h1>
 
@@ -313,9 +310,6 @@ morph=FECGSYN_benchMorph(pathdir,ch,debug)
 </section>  <hr>
 
 
-
-
-<!-- -----------WFDB FECGSYN------- -->
 <section class="bs-docs-section">
   <h1 id="wfdb" class="page-header">Convert to/from WFDB </h1>
   <p> WFDB is an open-source and widely used data format from Physionet (<a href="https://www.physionet.org"><span class="octicon octicon-globe"></span> www.physionet.org</a>). It is also the format adopted by the FECGSYNDB (<a href="https://www.physionet.org/physiotools/ipmcode/fecgsyn/"><span class="octicon octicon-globe"></span> available here</a>).</p>
@@ -356,4 +350,6 @@ wfdb2fecgsyn(pathdir)
 <div class="panel panel-warning"><div class="panel-heading"><span class="octicon octicon-alert"></span> Warning</div><div class="panel-body"> <code>pathdir</code> must be an unique identifier for a WFDB dataset, which excludes the extension of the files. For instance, for the <em>FECGSYNDB</em> <code>'sub01_snr00dB_l1_c0'</code> represents an unique identifier for a dataset consisting of multiple files: <code>_mecg</code>,<code>_fecg1</code>,<code>_noise1</code> with <code>.dat</code>, <code>.hea</code>, <code>.mqrs</code> and <code>.fqrs</code> extensions.</div></div>
 
  <div class="panel panel-info"><div class="panel-heading"><span class="octicon octicon-info"></span> Tip</div><div class="panel-body"> You may have a look at function <code>main_extract_data.m</code> function for a simple use of the <code>wfdb2fecgsyn.m</code>, see <a href="{{site.github.url}}/pages/examples.html#main_extract_data"><span class="octicon octicon-globe"></span> this example</a>. </div></div>
+
+-->
 </section> <hr>
