@@ -6,7 +6,7 @@ priority: 4
 
 ## Changelog
 
-Here is a list of changes made on each version of the <em>FECGSYN</em> simulator.
+<!-- Here is a list of changes made on each version of the <em>FECGSYN</em> simulator.
 
 - **v1.2 : 2017.03.13** <br>
   Update to include novel fetal signal quality metrics
@@ -39,4 +39,4 @@ Here is a list of changes made on each version of the <em>FECGSYN</em> simulator
     - Example containing patho-physiological events
     - @mohsalvi developed GUI for easy use    
   
-  
+  -->
